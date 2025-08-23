@@ -1,0 +1,14 @@
+using Avalonia.Controls;
+
+namespace CamOverlay
+{
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+            DataContext = new MainWindowViewModel();
+
+        }
+    }
+}

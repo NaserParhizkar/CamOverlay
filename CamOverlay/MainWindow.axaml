@@ -1,0 +1,37 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:vm="using:CamOverlay"
+        x:Class="CamOverlay.MainWindow"
+		x:DataType="vm:MainWindowViewModel"
+        Title="CamOverlay">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+
+		<!-- Video feed -->
+		<Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Background="white">
+			<Image x:Name="videoView" Source="{Binding CurrentFrame}" Stretch="Uniform">
+				<Image.RenderTransform>
+					<RotateTransform Angle="270"
+									 CenterX="0.5"
+									 CenterY="0.5" />
+				</Image.RenderTransform>
+			</Image>
+			<!-- Use this Image to display the frame -->
+		</Border>
+		
+		<Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Width="300" Height="300"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				BorderThickness="3"
+				BorderBrush="Green" />
+	</Grid>
+</Window>
