@@ -35,3 +35,32 @@
 				BorderBrush="Green" />
 	</Grid>
 </Window>
+
+
+
+
+<!--<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:AvaloniaApplication7"
+        x:Class="AvaloniaApplication7.MainWindow"
+        x:DataType="local:MainViewModel"
+        Title="AvaloniaApplication7"
+        Opened="Window_Opened"
+		WindowState="Maximized"
+		>
+
+	<Grid>
+		--><!-- Outer border with image --><!--
+		<Border x:Name="BorderMainImage" BorderBrush="Black" BorderThickness="2" >
+			<Image x:Name="MainImage" Stretch="Uniform"/>
+		</Border>
+
+		--><!-- Green square overlay --><!--
+		<Border  x:Name="BorderOverlay" Background="Green"
+                Opacity="0.5"
+                Width="{Binding OverlaySize}"
+                Height="{Binding OverlaySize}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+	</Grid>
+</Window>-->
